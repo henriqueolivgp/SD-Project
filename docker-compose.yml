@@ -1,15 +1,16 @@
 version: '3.7'
 
-services : 
+services:
   postgres:
-    image: bitnami/postgresql:latest # last version of postgres image
-  ports :
-    - '5432:5432'
-  environment :
-    - POSTGRES_USER=docker # username
-    - POSTGRES-PASSWORD=docker  # user password 
-    - POSTGRES_DB=shareeasyf # databse name
-  volumes :
-    - postgres_data:/bitnami/postgresql
-volumes :
-  postgres_data :
+    image: bitnami/postgresql:latest
+    ports:
+      - '5433:5432'
+    environment:
+      - POSTGRES_USER=sd
+      - POSTGRES_PASSWORD=sd
+      - POSTGRES_DB=sd
+    volumes:
+      - postgres_data:/bitnami/postgresql
+
+volumes:
+  postgres_data:
